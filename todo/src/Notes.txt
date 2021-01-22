@@ -1,0 +1,73 @@
+
+
+1. Build your UI(user interface)
+    -Create your App with basic html elements
+    Example:
+
+function App() {
+
+    const todos = [{
+        title:'todo 1',
+        id:0,
+        completed: false
+    },{
+        title:'todo 2',
+        id:1,
+        completed: false
+    },{
+        title:'todo 3',
+        id:2,
+        completed: false
+    }]
+
+  return (
+    <div className="App">
+        <h1>ToDo App</h1>
+        <div className='ListContainer'>
+            <h3>List of Items</h3>
+            <ul>
+                {
+                    todos.map(todo => {
+                    return(<li>{todo.title}</li>)
+                    })
+                }
+            </ul>
+            <button>Clear Completed</button>
+        </div>
+
+        <div className='todoForm'>
+            <form>
+                <label>
+                    Title:
+                    <input />
+                </label>
+                <button>Submit Todo</button>
+            </form>
+        </div>
+    </div>
+  );
+}
+
+2. Create Reducer.js file
+    -
+
+3. Build out your actions
+    -
+
+4. Connect to your UI
+
+
+
+
+
+What I Did:
+-Create React app with basic html 
+-Created TodoList, then imported and exported the files: (TodoList<div>)
+-Created TodoForm, then imported and exported the files: (TodoForm<div>)
+-Created Todo, then imported and exported the files: (TodoForm<div>). Also checked to see if todos in App.js would update.(Success)
+-Created Reducer folder + index.js file, there we created the initialState and reducer
+-Back in App.js, imported reducer + initialState and used useReducer() to set them to state inside App() 
+
+-Created action folder + file, created addTODO then exported it to App and called dispatch() with it.
+-Started working on TodoForm, made handleChange and handleSubmit functions
+* Warren Explains code - https://www.youtube.com/watch?v=sgxxB0NTzfQ&t=3166s - (52:45) (1:16:20)
